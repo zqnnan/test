@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./cookie.js"></script>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    #container{
+        width: 350px;
+        height: 50px;
+        position: relative;
+    }
+    #ipt1{
+        position: absolute;
+    }
+    #text{
+        position: absolute;
+        left: 180px;
+        color: red;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+   <div id="container">
+       <input type="text" id="ipt1">
+       <div id="text">请输入正确的格式</div>
+   </div>
+   <input type="button" id="sub" value="提交">
+
+   <script>
+   var oIpt=document.getElementById('ipt1')
+   var oText=document.getElementById('text')
+   var oBtn=document.getElementById('sub')
+   var index=0
+   var re=/12345/g
+   oIpt.onfocus=function(){
+    oText.style.display='block'
+   }
+   oIpt.onblur=function(){
+        if(re.test(oIpt.value)){
+            oText.innerHTML='格式输入正确';
+            oText.style.color='green'
+        }else{
+            oText.innerHTML='格式输入错误';
+        }
+   }
+   oBtn.onclick=function(){
+       index++
+       setCookie('passWord'+index,oIpt.value,14)
+   }
+   // 在使用cookie的是时候  必须用服务器启
+
+   </script>
+</body>
+</html>

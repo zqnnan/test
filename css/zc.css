@@ -1,0 +1,189 @@
+.header{
+    border-bottom: 2px solid #2bb8aa;
+    min-width: 980px;
+    color: #666;
+}
+.nav{
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 980px;
+}
+.nav p{
+    display: inline-block;
+    width: 54px;
+    height: 36px;
+    background-position: -669px -748px;
+    background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+    background-size: initial;
+    text-indent: -1000px;
+/* float: left; */
+}
+.nav-r{
+    float: right;
+    line-height: 36px;
+    font-size: 16px;
+}
+
+.btn{
+    box-sizing: border-box;
+    width: 120px;
+    padding: 0;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    margin: 8px 0;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 34px;
+}
+.dl{
+    display: inline-block;
+    height: 25px;
+    width: 47px;
+    background-color: #2db3a6;
+    line-height: 1.5;
+    letter-spacing: .1em;
+    text-align: center;
+    text-decoration: none;
+    border-width: 0 0 1px;
+    border-style: solid;
+    background-repeat: repeat-x;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+}
+.content{
+    margin: 0 auto 30px;
+    padding-top: 30px;
+    width: 980px;
+    min-height: 300px;
+}
+form{
+    height: 333px;
+    width: 100%;
+    /* background: darkcyan; */
+}
+.from-filed{
+    position: relative;
+    padding: 8px 0 8px 110px;
+    zoom: 1;
+    
+}
+label{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    padding-top: 6px;
+    font-size: 14px;
+    text-align: right;
+    color: #333;
+
+}
+.from-filed .inpp{
+    display: inline-block;
+    width: 248px;
+    height: 24px;
+    margin: -1px auto;
+    padding: 5px;
+    border: 1px solid #aaa;
+    line-height: 24px;
+    vertical-align: top;
+}
+.from-filed span{
+    display: inline-block;
+    margin-left: 4px;
+    padding: 6px 0;
+    line-height: 24px;
+    font-size: 12px;
+    color: #999;
+    vertical-align: top;
+    zoom: 1;
+    font-size: 15px;
+}
+.from-filed label{
+    position: absolute;
+    left: 0;
+    width: 100px;
+    padding-top: 6px;
+    font-size: 14px;
+    text-align: right;
+    color: #333;
+}
+.btn1{
+    cursor: pointer;
+    font-size: 13px;
+    height: 23px;
+    width: 136px;
+    text-indent: 10px;
+    color: #333;
+    background-color: #dedede;
+    border: 1px solid #e3e3e3;
+    border-bottom: 1px solid #aaa;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom,#f7f7f7,#dedede);
+}
+.fjj1{
+    margin-top:-16px;
+}
+.pw-strength{
+    height: 30px;
+    width: 261px;
+    position: relative;
+    top: 10px;
+    left: 0px;   
+}
+.box{
+    position: absolute;   
+}
+.box .pw-strength__label{  
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    height: 8px;
+    line-height: 8px;
+    width: 81px;
+    border-right: 2px solid #fff;
+    color: #fff;
+    background: #eee; 
+}
+.btn2{
+    background-color: #2db3a6;
+    padding: 7px 20px 6px;
+    width: 178px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+.di{
+    position: relative;
+    padding: 3px 10px 3px 110px;
+    margin: 0 auto 8px;
+    zoom: 1;
+}
+.di a{
+    color: #2bb8aa;
+    text-decoration: none;
+    font-size: 13px;
+}
+.di a:hover{
+    color: #2bb8aa;
+    text-decoration: underline;
+}
+.footer{
+    border-top: 1px solid #EEE;
+    padding-top: 20px;
+    text-align: center;
+
+}
+.copy p{ 
+    margin: auto;
+    font-size: 13px;
+    font-family: initial;
+    margin-left: 18px;
+    color: #999;
+}
