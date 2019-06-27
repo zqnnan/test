@@ -90,8 +90,7 @@ label{
     border: 1px solid #aaa;
     line-height: 24px;
     vertical-align: top;
-}
-.from-filed span{
+} .from-filed span{
     display: inline-block;
     margin-left: 4px;
     padding: 6px 0;
@@ -101,6 +100,39 @@ label{
     vertical-align: top;
     zoom: 1;
     font-size: 15px;
+} 
+.tianjia{
+    display: inline-block;
+}
+#lanse{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/sdf.png);
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    overflow: hidden;
+    background-position: 0 -453px;
+    margin-top:3px;
+    /* display: none; */
+}
+.tianjia .shuom{
+    display: inline-block;
+    display: none;
+    /* margin-top:10px; */
+}
+#huanse{
+    display: inline-block;
+    width: 17px;
+    height: 8px;
+    background-image: url(../img/sdf.png);
+    background-position: 0 -296px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    overflow: hidden;
+    margin-top:3px;
+    vertical-align: -3px;
+   /* display: none; */
 }
 .from-filed label{
     position: absolute;
@@ -149,6 +181,29 @@ label{
     color: #fff;
     background: #eee; 
 }
+.pw-strength__label .move{
+height: 100%;
+width: 100%;
+     
+}
+#active{
+   height: 19px;
+   margin-top: -14px;
+   line-height: 19px;
+   width: 0px;
+   background: orangered;
+   animation: move 1s linear forwards;
+   -webkit-animation: move 1s linear forwards;
+}
+@keyframes move{
+form{
+width: 0px;
+}to{
+    width: 81px;
+}
+}
+
+
 .btn2{
     background-color: #2db3a6;
     padding: 7px 20px 6px;
@@ -187,3 +242,4 @@ label{
     margin-left: 18px;
     color: #999;
 }
+

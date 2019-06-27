@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.logo {
+.logo{
     width:82px;
     height:54px; 
     background-position: -188px -808px;
@@ -266,4 +266,10 @@ margin-top:45px;
     background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/icons.c1b3784.png);
     background-repeat: no-repeat;
     background-position: 0 -296px;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
 }

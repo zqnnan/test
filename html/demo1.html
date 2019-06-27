@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .show1 {
+            height: 100px;
+            width: 100px;
+            background: darkblue;
+            display: none;
+        }
+
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击</button>
+    <div class="show1"></div>
+</body>
+<script>
+    var oDian = document.getElementsByTagName('button')[0];
+    var oShow = document.getElementsByClassName('show1')[0]
+    console.log(oDian, oShow)
+    oDian.onclick = function () {
+        console.log(1)
+        oShow.style.display = 'block'
+        oDian.classList.add('disabled')
+        console.log(2)
+    }
+</script>
+
+</html>

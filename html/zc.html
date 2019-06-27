@@ -24,9 +24,13 @@
     <div class="content">
         <form action="">
             <div class="from-filed">
-                <label for="">手机号</label>
+                <label class="phone">手机号</label>
                 <input type="text" class="inpp">
-                <span>注册成功后，全美团通用</span>
+                <span class="zccg">注册成功后，全美团通用</span>
+                <div class="tianjia">
+                   <span class="lanse"></span>
+                   <span class="shuom">请输入正确的11位手机号码</span>
+               </div>
             </div>
             <div class="from-filed fjj1">
                 <label for=""></label>
@@ -36,22 +40,40 @@
             <div class="from-filed">
                 <label for="">短信动态码</label>
                 <input type="text" class="inpp">
+                <div class="tianjia ">
+                        <span class="lanse"></span>
+                        <span class="shuom ">输入错误，请重新输入</span>
+                </div>
             </div>
             <div class="from-filed">
                     <label for="">创建密码</label>
-                    <input type="text" class="inpp">
+                    <input type="password" class="inpp">
+                    <div class="tianjia ">
+                        <span class="lanse"></span>
+                        <span class="shuom ">密码太短，至少6个字符</span>
+                </div>
                     <div class="pw-strength">
                         <div class="box">
-                                <span class="pw-strength__label">弱</span>
-                                <span class="pw-strength__label">中</span>
-                                <span class="pw-strength__label">强</span>
+                                <span class="pw-strength__label  " > 弱
+                                    <div class="move"  > </div>
+                                    </span>
+                                <span class="pw-strength__label">中
+                                        <div class="move"  > </div>
+                                </span>
+                                <span class="pw-strength__label">强
+                                        <div class="move"  > </div>
+                                </span>
                         </div>
                         
                     </div>
             </div>
             <div class="from-filed">
                     <label for="">确认密码</label>
-                    <input type="text" class="inpp">
+                    <input type="password" class="inpp">
+                    <div class="tianjia ">
+                            <span class="lanse"></span>
+                            <span class="shuom ">两次输入的密码不一致，请重新输入</span>
+                    </div>
             </div>
             <div class="from-filed">
                     <label for=""></label>
@@ -84,5 +106,6 @@
 </body>
 <script src="../js/jquery.js"></script>
 <script src="../js/zc.js"></script>
+<script src="../js/cookie .js"></script>
 
 </html>

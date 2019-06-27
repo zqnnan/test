@@ -30,6 +30,17 @@ $(function () {
     })
 
 
+    var ind=getCookie('index')
+    var indd=ind-0
+    console.log(typeof indd)  //2
+    var arr1=[];
+    for(let j=1;j<indd+1;j++){
+        var phone1=getCookie('phone'+j)
+        var xin=arr1.push(phone1) 
+    }
+
+
+
     // 手机号验证
     var re = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
     $('.phone-input').focus(function () {
@@ -38,7 +49,22 @@ $(function () {
     $('.phone-input').blur(function () {
         $('.phone').eq(1).css('border-color', '#aaa')
         if (re.test($('.phone-input').val())) {
+
+
+            var result = $.inArray($('.phone-input').val(), arr1); 
+            console.log(result) 
+           if(result==-1){
+            $('.tishi').show().html('<i></i> 请注册账号')
+            
+           }else{
             $('.tishi').hide()
+           }
+
+
+
+
+          
+            
         } else {
             $('.tishi').show().html('<i></i> 手机号格式输入错误')
 
@@ -68,87 +94,88 @@ $(function () {
         }
     })
 
-
-    console.log($('.tishi').css('display'))
-    $('.denglu').click(function () {
-        console.log($('.tishi').css('display'))
-        if ($('.phone-input').val() != '' && $('.pass-input').val() != '') {
-            if ($('.tishi').css('display') == 'none') {
-                // alert(1)
-                $('.tishi').show().html('<i></i> 检测到您的账号存在风险，需要验证')
-            } else {
-                // alert(2)
-            }
-            // window.open('http://bj.meituan.com/')
+//  获取随机数
+    function suiji() {
+        var num = "";
+        for (var i = 0; i < 6; i++) {
+            num += parseInt(Math.random() * 10);
         }
+        return num;
+    }
+    var Num = suiji();
 
-    })
 
-
-    var shu = 60
-   
-  
-        $('.huoqu').click(function () {
-           
-            if ($('.phone-input').val()!= ''&& $('.tishi').css('display') == 'none') {
-                console.log(1)
+    // 获取动态码
+    var shu = 60;
+    $('.huoqu').click(function () {
+        if ($('.phone-input').val() != '' && $('.tishi').css('display') == 'none') {
+            console.log(1)
             function jishu() {
                 shu--
                 if (shu > 0) {
                     $('.huoqu').text('重新获取' + shu)
+                   
+                    // $('.huoqu').addclass('disabled')      
                 } else {
                     clearInterval(timer)
                     $('.huoqu').text('重新获取')
                 }
             }
-            var timer = setInterval(jishu, 1000)
+            var timer = setInterval(jishu, 1000)    
+            alert(Num)
         }
-        })
+    })
+
+console.log($('.dw').find('input'))   
 
 
 
 
+  
+// 获取cookie
 
+var arr2=[];
+for(let j=1;j<indd+1;j++){
+    var pass1=getCookie('pass'+j)
+    var xin=arr2.push(pass1) 
+}
 
+$('.denglu').click(function () {
+    var result1 = $.inArray($('.phone-input').val(), arr1); 
+    var result2 = $.inArray($('.pass-input').val(), arr2); 
+    
+    console.log(result2==result1)
+    if($('.phone-input').val() != '' && $('.pass-input').val() != ''){
+        if (result2==result1 ){
+            window.open('../html/zhuye.html')
+  
+       } else{
+        $('.tishi').show().html('<i></i> 密码输入错误')
+       }
+     
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // 设置cookie
-    /*    var $index = 0;
-       $('.denglu').click(function () {
-           console.log($('.tishi').attr('display'))
+    console.log($('.dw').find('input').val())
+    if($('.phone-input').val() != ''&& $('.dw').find('input').val()==Num){
+        $('.tishi').hide()
+         window.open('../html/zhuye.html')
+        
+    }else{
+        $('.tishi').show().html('<i></i> 验证码输入错误')
+    }
    
-           if ($('.phone-input').val() != '' && $('.pass-input').val() != '') {
-               $index++
-               setCookie('phone' + $index, $('.phone-input').val(), 1)
-               window.open('http://bj.meituan.com/')
-           }
+    
    
-       }) */
-    // 移出
-    // removeCookie()
-    // setCookie('phone1',$('.phone-input').val(),-1)
+})
 
 
-    // 动态码
-    var reg = /^[a-zA-Z0-9]{3,5}$/;
+
+//  注册跳转
+ $('.zcy').click(function(){
+    window.location="../html/zc.html"
+})
+
+
 
 
 
